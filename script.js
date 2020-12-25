@@ -79,11 +79,11 @@ function handleAuthClick() {
           const channel = response.result.items[0];
           const output = `
             <ul class="collection">
-                <li class=""collection-item>Title : ${channel.snippet.title}</li>
-                <li class=""collection-item>ID : ${channel.id}</li>
-                <li class=""collection-item>Subscribes : ${channel.statistics.subscriberCount}</li>
-                <li class=""collection-item>Views : ${channel.statistics.viewCount}</li>
-                <li class=""collection-item>Video : ${channel.statistics.videoCount}</li>
+                <li class="collection-item">Title : ${channel.snippet.title}</li>
+                <li class="collection-item">ID : ${channel.id}</li>
+                <li class="collection-item">Subscribes : ${channel.statistics.subscriberCount}</li>
+                <li class="collection-item">Views : ${channel.statistics.viewCount}</li>
+                <li class="collection-item">Video : ${channel.statistics.videoCount}</li>
             </ul>
             <p>${channel.snippet.description}</p>
             <hr>
