@@ -50,7 +50,7 @@ function updateSigninStatus(isSignedIn){
         signoutButton.style.display = 'block';
         content.style.display = 'block';
         videoContainer.style.display = 'block';
-        getChannel(defaultChannel)
+        getChannel(defaultChannel);
     }else{
         authorizeButton.style.display = 'block';
         signoutButton.style.display = 'none';
