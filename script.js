@@ -18,7 +18,7 @@ channelForm.addEventListener('submit',e =>{
 
     const channel = channelInput.value;
     getChannel(channel)
-    
+
 })
 
 //load auth2 library 
@@ -90,9 +90,9 @@ function handleAuthClick() {
             <ul class="collection">
                 <li class="collection-item">Title : ${channel.snippet.title}</li>
                 <li class="collection-item">ID : ${channel.id}</li>
-                <li class="collection-item">Subscribes : ${channel.statistics.subscriberCount}</li>
-                <li class="collection-item">Views : ${channel.statistics.viewCount}</li>
-                <li class="collection-item">Video : ${channel.statistics.videoCount}</li>
+                <li class="collection-item">Subscribes : ${numberWithCommas(channel.statistics.subscriberCount)}</li>
+                <li class="collection-item">Views : ${numberWithCommas(channel.statistics.viewCount)}</li>
+                <li class="collection-item">Video : ${numberWithCommas(channel.statistics.videoCount)}</li>
             </ul>
             <p>${channel.snippet.description}</p>
             <hr>
@@ -103,4 +103,9 @@ function handleAuthClick() {
           showChannelData(output);
       })
       .catch(err => alert('No Channel by that Name'));
+  }
+
+  // Add commas to number
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
