@@ -10,7 +10,7 @@ const channelForm = document.getElementById('channel-form');
 const channelInput = document.getElementById('channel-input');
 const videoContainer = document.getElementById('video-container');
 
-const defaultChannel = 'techguyweb';
+const defaultChannel = 'tseries';
 
 //Form submit and change channel
 channelForm.addEventListener('submit',e =>{
