@@ -17,8 +17,8 @@ channelForm.addEventListener('submit',e =>{
     e.preventDefault();
 
     const channel = channelInput.value;
-
     getChannel(channel)
+    
 })
 
 //load auth2 library 
