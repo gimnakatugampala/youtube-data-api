@@ -126,7 +126,7 @@ function numberWithCommas(x) {
 
     request.execute(response =>{
         console.log(response)
-        const playlistItems  = response.result.items;
+        const playListItems  = response.result.items;
         if (playListItems) {
             let output = '<br><h4 class="center-align">Latest Videos</h4>';
       
