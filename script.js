@@ -101,6 +101,10 @@ function handleAuthClick() {
 
           //Display Chnnael Data
           showChannelData(output);
+
+          //ALl Videos
+        const playlistId = channel.contentDetails.relatedPlaylists.uploads;
+        requestVideoPlaylist(playlistId);
       })
       .catch(err => alert('No Channel by that Name'));
   }
@@ -109,3 +113,18 @@ function handleAuthClick() {
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+
+
+  function requestVideoPlaylist(playlistId) {
+    const requestOptions = {
+      playlistId: playlistId,
+      part: 'snippet',
+      maxResults: 10
+    }
+
+    const request = gapi.client.youtube.playlistItems.list(requestOptions);
+
+    request.execute(response =>{
+        console.log(response)
+    })
+}
